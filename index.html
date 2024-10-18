@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LS-RP Strawman Gun Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to a CSS file for styling -->
+  </head>
+  <body>
+    <h1>LS-RP Strawman Gun Calculator</h1>
+
+    <div class="input-group">
+      <label for="gunType">Gun Type:</label>
+      <select id="gunType">
+        <option value="Deagle">Deagle</option>
+        <option value="Shotgun">Shotgun</option>
+        <option value="Colt45">Colt 45</option>
+        <option value="Mac10">Mac 10</option>
+        <option value="Tec9">Tec 9</option>
+        <option value="SDPistol">Silenced Pistol</option>
+        <option value="Rifle">Rifle</option>
+        <option value="MP5">MP5</option>
+        <option value="AK47">AK47</option>
+        <option value="M4">M4</option>
+        <option value="Knuckles">Knuckles</option>
+        <option value="Golfclub">Golfclub</option>
+        <option value="Nightstick">Nightstick</option>
+        <option value="Shovel">Shovel</option>
+        <option value="PoolCue">Pool Cue</option>
+        <option value="Katana">Katana</option>
+        <option value="Cane">Cane</option>
+      </select>
+      <button type="button" id="calculateTotal">Add</button>
+    </div>
+
+    <div id="result">
+      <table>
+        <thead>
+          <tr>
+            <th>Gun Type</th>
+            <th>Price</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="gunList"></tbody>
+      </table>
+    </div>
+
+    <div id="totalPrice">Total Price: $0</div>
+    <button type="button" id="resetAll">Reset</button>
+
+    <script src="index.js"></script>
+  </body>
+</html>
