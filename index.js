@@ -1,4 +1,5 @@
 let totalPrice = 0;
+let rowNumber = 0;
 
 function addGun() {
   const gunType = document.getElementById("gunType").value;
@@ -24,18 +25,20 @@ function addGun() {
   };
 
   const price = gunPrices[gunType];
+  rowNumber++;
 
   const newRow = document.createElement("tr");
 
+  const numberCell = document.createElement("td");
+  numberCell.textContent = rowNumber;
+
   const gunTypeCell = document.createElement("td");
   gunTypeCell.textContent = gunType;
-  newRow.appendChild(gunTypeCell);
 
   const priceCell = document.createElement("td");
   priceCell.textContent = `$${price}`;
-  newRow.appendChild(priceCell);
 
-  const actionCell = document.createElement("td");
+  const removeCell = document.createElement("td");
   const removeButton = document.createElement("button");
   removeButton.textContent = "Remove";
 
@@ -43,13 +46,24 @@ function addGun() {
     totalPrice -= price;
     newRow.remove();
     updateTotalDisplay();
+    rowNumber--;
+    updateRowNumbers();
   };
 
-  actionCell.appendChild(removeButton);
-  newRow.appendChild(actionCell);
+  removeCell.appendChild(removeButton);
 
-  const gunList = document.getElementById("gunList");
-  gunList.appendChild(newRow);
+  // Append all cells to the new row
+  newRow.appendChild(numberCell);
+  newRow.appendChild(gunTypeCell);
+  newRow.appendChild(priceCell);
+  newRow.appendChild(removeCell);
+
+  const tableBody = document.querySelector("table tbody");
+  if (!tableBody) {
+    const newTableBody = document.createElement("tbody");
+    document.querySelector("table").appendChild(newTableBody);
+  }
+  document.querySelector("table tbody").appendChild(newRow);
 
   totalPrice += price;
   updateTotalDisplay();
@@ -60,16 +74,24 @@ function updateTotalDisplay() {
   totalDisplay.textContent = `Total Price: $${totalPrice}`;
 }
 
+function updateRowNumbers() {
+  const rows = document.querySelectorAll("table tbody tr");
+  rows.forEach((row, index) => {
+    row.firstChild.textContent = index + 1;
+  });
+}
+
 document.getElementById("calculateTotal").addEventListener("click", addGun);
 
 function clearAll() {
-  const gunList = document.getElementById("gunList");
-  gunList.innerHTML = "";
+  const resultDiv = document.getElementById("result");
+  resultDiv.textContent = "";
 
   const totalDisplay = document.getElementById("totalPrice");
-  totalDisplay.textContent = "Total Price: $0";
+  totalDisplay.textContent = "";
 
   totalPrice = 0;
+  rowNumber = 0; // Reset row number
 }
 
 document.getElementById("resetAll").addEventListener("click", clearAll);

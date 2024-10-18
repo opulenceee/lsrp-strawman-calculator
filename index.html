@@ -38,18 +38,24 @@
       <table>
         <thead>
           <tr>
+            <th>#</th>
+            <!-- Column for numbering -->
             <th>Gun Type</th>
             <th>Price</th>
             <th>Action</th>
+            <!-- Column for the remove button -->
           </tr>
         </thead>
-        <tbody id="gunList"></tbody>
+        <tbody>
+          <!-- Add tbody here -->
+        </tbody>
       </table>
     </div>
 
-    <div id="totalPrice">Total Price: $0</div>
-    <button type="button" id="resetAll">Reset</button>
-
+    <div id="totalContainer">
+      <div id="totalPrice"></div>
+      <button type="button" id="resetAll">Reset</button>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>

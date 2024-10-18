@@ -63,16 +63,24 @@ tr:hover {
   background-color: #f1f1f1;
 }
 
-#totalPrice {
-  margin-top: 20px;
-  font-weight: bold;
-  text-align: center;
-}
-
 button#resetAll {
   background-color: #dc3545;
 }
 
 button#resetAll:hover {
   background-color: #c82333;
+}
+
+#totalContainer {
+  text-align: center; /* Center align the contents */
+  margin-top: 20px; /* Space above the total container */
+}
+
+#resetAll {
+  margin-top: 10px; /* Space above the reset button */
+}
+
+#totalPrice {
+  margin-top: 20px;
+  font-weight: bold;
 }
