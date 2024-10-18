@@ -84,7 +84,7 @@ function updateRowNumbers() {
 document.getElementById("calculateTotal").addEventListener("click", addGun);
 
 function clearAll() {
-  const tableBody = document.getElementById("table tbody");
+  const tableBody = document.querySelector("table tbody");
   tableBody.innerHTML = "";
 
   const totalDisplay = document.getElementById("totalPrice");
