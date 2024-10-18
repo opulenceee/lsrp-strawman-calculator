@@ -84,8 +84,8 @@ function updateRowNumbers() {
 document.getElementById("calculateTotal").addEventListener("click", addGun);
 
 function clearAll() {
-  const resultDiv = document.getElementById("resultBody");
-  resultDiv.textContent = "";
+  const tableBody = document.getElementById("table tbody");
+  tableBody.innerHTML = "";
 
   const totalDisplay = document.getElementById("totalPrice");
   totalDisplay.textContent = "";
