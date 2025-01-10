@@ -3,59 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LS-RP Strawman Gun Calculator</title>
-    <link rel="stylesheet" href="styles.css" />
-    <!-- Link to a CSS file for styling -->
+    <title>LS-RP SAMP Tools</title>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <h1>LS-RP Strawman Gun Calculator</h1>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h4>LS-RP SAMP Tools</h4>
+        <br /><br />
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Screenshot Archive</a></li>
+          <li><a href="#">Player Activity</a></li>
+          <li><a href="#">Groups</a></li>
+          <li><a href="#">Scheme Calculator</a></li>
+          <li><a href="#">Finance Calculator</a></li>
+          <li><a href="#">API</a></li>
+          <li><a href="#">Screenshot Editor</a></li>
+        </ul>
+      </aside>
 
-    <div class="input-group">
-      <label for="gunType">Gun Type:</label>
-      <select id="gunType">
-        <option value="Deagle">Deagle</option>
-        <option value="Shotgun">Shotgun</option>
-        <option value="Colt45">Colt 45</option>
-        <option value="Mac10">Mac 10</option>
-        <option value="Tec9">Tec 9</option>
-        <option value="SDPistol">Silenced Pistol</option>
-        <option value="Rifle">Rifle</option>
-        <option value="MP5">MP5</option>
-        <option value="AK47">AK47</option>
-        <option value="M4">M4</option>
-        <option value="Knuckles">Knuckles</option>
-        <option value="Golfclub">Golfclub</option>
-        <option value="Nightstick">Nightstick</option>
-        <option value="Shovel">Shovel</option>
-        <option value="PoolCue">Pool Cue</option>
-        <option value="Katana">Katana</option>
-        <option value="Cane">Cane</option>
-      </select>
-      <button type="button" id="calculateTotal">Add</button>
+      <!-- Main Content -->
+      <main class="content">
+        <h1>Welcome!</h1>
+        <p>
+          Hello and welcome to my SAMP tools for LS-RP. I'm KUnderwood, aka
+          Kendrick_Underwood. Contact me on the LS-RP forums, or on Discord:
+          dan9571.
+        </p>
+      </main>
     </div>
 
-    <div id="result">
-      <table>
-        <thead>
-          <tr>
-            <th>#</th>
-            <!-- Column for numbering -->
-            <th>Gun Type</th>
-            <th>Price</th>
-            <th>Action</th>
-            <!-- Column for the remove button -->
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Add tbody here -->
-        </tbody>
-      </table>
-    </div>
-
-    <div id="totalContainer">
-      <div id="totalPrice"></div>
-      <button type="button" id="resetAll">Reset</button>
-    </div>
-    <script src="index.js"></script>
+    <!-- Footer -->
+    <footer>
+      <p>
+        Copyright © 2024, KUnderwood. All Rights Reserved. This site is not
+        affiliated with Rockstar Games or Los Santos Roleplay.
+      </p>
+    </footer>
   </body>
 </html>
